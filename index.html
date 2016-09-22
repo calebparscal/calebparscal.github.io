@@ -1,43 +1,29 @@
-def dfs(graph, start_pos, stop_pos):
-    to_visit = [start_pos]
-    visited = set()
-    moves = []
-    col_len = len(graph[0])
-    row_len = len(graph)
-    while to_visit:
-        v = to_visit.pop()
-        if v in visited:
-            continue
-        visited.add(v)
-        moves.append(v)
-        
-        a, b = v
-        if (a, b) == stop_pos:
-            return moves
-        # follow convention: UP, LEFT, RIGHT, DOWN
-        up = (a-1, b)
-        left = (a, b-1)
-        right = (a, b+1)
-        down = (a+1, b)
-        
-        for move in (up, left, right, down):
-            x, y = move
-            if 0<=x<=row_len-1 and 0<=y<=col_len-1 and graph[x][y]!='%':
-                to_visit.append(move)
+Undertale
+   
+314PAGES ON
+THIS WIKI View source    Comments84
+For the track named "Undertale", see Undertale (Soundtrack).
+UNDERTALE
+UNDERTALE logo
+"The friendly RPG where nobody has to die!"
+— Undertale's Release Trailer
+Undertale (stylized as UNDERTALE and formerly UnderTale)[1] is a role-playing game developed independently by Toby Fox with additional art by Temmie Chang in the Game Maker: Studio engine. It was released for Microsoft Windows and Mac OS X on September 15, 2015, and for Linux on July 17, 2016. The game has been met with overwhelmingly positive reviews.
 
-if __name__ == '__main__':
-    start_pos = tuple(map(int, raw_input().split()))
-    food_pos = tuple(map(int, raw_input().split()))
-    rows, _ = map(int, raw_input().split())
-    
-    matrix = []
-    for row in xrange(rows):
-        matrix.append(list(raw_input()))
-    visited = dfs(matrix, start_pos, food_pos)
-    x = len(visited)
-    print x
-    for pos in visited:
-        print pos[0], pos[1]
-    print x-1
-    for pos in visited:
-print pos[0], pos[1]
+Contents[show]
+Gameplay
+UTBATTLESYSTEM
+The player, represented by the red heart icon, evading enemy attacks.
+Undertale is a role-playing game that utilizes many of the traditional mechanics normally seen in role-playing games but with a number of differences.
+
+The battle system in Undertale is turn-based and seems to be heavily inspired by bullet-hell games - in particular, the Touhou series - where the protagonist's SOUL, represented by a red heart, must avoid attacks unleashed by the opponent. As the game progresses, new elements are introduced, such as colored obstacles which require the soul to stand still or move through them, and boss battles which change the way the heart is controlled. During the player's turn, they have the opportunity to fight the opponent (involving quick-time input), perform actions that can change the opponent's mood, use items, and show mercy by sparing the enemy, which ends the combat if the correct actions have been used. Killing an enemy will reward EXP and LV, but neither are given if they are successfully spared; GOLD is earned in both cases. The game has a large emphasis on the morality of killing and sparing the Monsters encountered, as the player's actions determine what ending they will receive. Unlike traditional RPGs, it is possible to complete the game without ever killing a single monster.
+
+The overworld mostly consists of puzzles that the player must solve to progress. Monster battles can also be seen as puzzles, requiring the right set of actions to resolve the fight peacefully. However, should the player decide to commit to murdering every monster they encounter, almost all the puzzles are disabled, and the player is required to grind to progress the game. Unlike traditional RPGs, grinding (under a neutral setting) and backtracking are not mandatory, and no side quests exist within the game.
+
+The game is also known for its dialogue that is witty and humorous as well as having drastic alterations based on the player's actions, and occasional breaking of the fourth wall. While killing/sparing results in notable dialogue changes, the most prominent alteration involves the manipulation of the game's SAVE feature, particularly quitting or resetting the game: almost every major possesses meta-knowledge, remembering actions the player had performed in previous playthroughs.
+
+Main Story
+Long ago, two races ruled over the Earth: Humans and Monsters. One day, a war broke out between the two races and after a long series of battle, the humans were victorious. The greatest of their magicians sealed the monsters to the Underground with a magic barrier. However, this barrier is not a perfect barrier.
+
+Many years after the war, in 201X, a human child climbs Mount Ebott for their own mysterious reason. It is said that those who climb the mountain never return. The child discovers an enormous hole in the mountain and falls in while trying to get a closer look. After that, the story begins.
+
+The protagonist starts off their adventure in the Ruins and soon meets Flowey, a sentient flower who attempts to kill the protagonist for his own amusement. He is thwarted by a motherly monster named Toriel, who teaches the child how to solve puzzles and resolve conflicts in the Underground. After a boss fight with her, she allows the child to exit the ruins.
